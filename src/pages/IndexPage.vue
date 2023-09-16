@@ -5,9 +5,10 @@
         id="gridContainer"
         :data-source="employees"
         key-expr="ID"
+        :rtl-enabled="true"
         :allow-column-reordering="true"
         :allow-column-resizing="true"
-        :column-auto-width="true"
+        :column-auto-width="false"
         :show-borders="true"
         :scrolling="{ useNative: true }"
       >
@@ -17,12 +18,12 @@
           :width="230"
           :fixed="true"
           :calculate-cell-value="calculateCellValue"
-          caption="Employee"
+          caption="Employee (1)"
         />
         <DxColumn data-field="first column" data-type="date" />
         <DxColumn data-field="second column" data-type="date" />
-        <DxColumn :width="230" data-field="Position" alignment="right" />
-        <DxColumn :width="230" data-field="Address" />
+        <DxColumn data-field="Position" alignment="right" />
+        <DxColumn data-field="Address" />
         <DxColumn data-field="City" />
         <DxColumn data-field="State" />
         <DxColumn :visible="false" data-field="Zipcode" />
